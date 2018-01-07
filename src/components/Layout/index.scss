@@ -1,0 +1,14 @@
+@import '../scss/common.scss';
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper {
+  @extend %inherit-parent-container;
+}
+
+.rooter-wrap {
+  @extend %inherit-parent-container;
+}
