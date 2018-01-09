@@ -8,8 +8,8 @@ const menus = [{
   name: '记一下账',
   link: '/home',
 }, {
-  name: '查一下账',
-  link: '/check',
+  name: '图表',
+  link: '/chart',
 }];
 
 class Sider extends Component {

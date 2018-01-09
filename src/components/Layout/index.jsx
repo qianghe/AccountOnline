@@ -24,7 +24,7 @@ class MainLayout extends Component {
         <Header />
         <div style={{ display: 'flex' }}>
           <Sider {...this.props} />
-          <div className="content">
+          <div className="content" style={{ width: '100%' }}>
             {this.props.children}
           </div>
         </div>

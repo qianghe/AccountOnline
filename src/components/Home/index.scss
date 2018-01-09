@@ -1,0 +1,57 @@
+.home {
+  display: flex;
+
+  > section {
+    padding: 20px;
+
+    &:nth-of-type(1) {
+      width: 55%;
+    }
+    &:nth-of-type(2) {
+      width: 45%;
+    }
+  }
+
+  &-list {
+    &-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-left: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    h3 {
+      color: #999;
+    }
+  }
+
+  .account {
+    padding: 15px 30px 0 30px;
+
+    &-title {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      background-color: #aab8a3;
+      color: #fff;
+      font-size: 15px;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border-bottom: 1px dotted #eee;
+    }
+
+    &-item {
+      &-mark {
+        color: #999;
+        font-size: 12px;
+        font-style: italic;
+      }
+    }
+  }
+}

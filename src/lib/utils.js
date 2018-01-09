@@ -53,7 +53,7 @@ export const formatTime = (stamp, joiner) => {
   const year = date.getFullYear() + joiner;
   const month = (date.getMonth() + 1 < 10 ?
     '0' + (date.getMonth() + 1) : date.getMonth() + 1) + joiner;
-  const day = date.getDate();
+  const day = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate();
 
   return `${year}${month}${day}`;
 };
