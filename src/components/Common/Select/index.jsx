@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import './select.scss';
+import './index.scss';
 
 class Select extends Component {
   static defaultProps = {
@@ -62,8 +62,8 @@ class Select extends Component {
           {value || placeholder}
           <span
             className={classNames({
-              'comp-select-text-arrow': true,
-              'comp-select-text-arrow--up': toggle ? true : false,
+              'comp-select-text-arFormItem': true,
+              'comp-select-text-arFormItem--up': toggle ? true : false,
             })}
           />
         </section>

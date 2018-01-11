@@ -10,7 +10,7 @@ const history = new CreateHashHistory();
 // 本地mock端口
 // const BASEURL = '//8.zhuanzhuan.com:9001';
 // 测试环境
-const BASEURL = '//sspapi.zhuanspirit.com';
+const BASEURL = 'http://hqiswonder.com.cn:3000';
 
 export const dispatchCors = (config) => {
   const { url, params, method } = config;

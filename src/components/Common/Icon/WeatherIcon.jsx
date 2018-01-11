@@ -1,5 +1,5 @@
 import React from 'react';
-import '../scss/weather.scss';
+import './weatherIcon.scss';
 
 export const SunShower = () => (
   <div className="icon sun-shower">

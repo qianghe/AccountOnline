@@ -1,4 +1,4 @@
-@import '../scss/common';
+@import '../../scss/common';
 
 .comp-select {
   position: relative;
@@ -15,7 +15,7 @@
       color: #999;
     }
 
-    &-arrow {
+    &-arFormItem {
       position: absolute;
       width: 8px;
       height: 8px;

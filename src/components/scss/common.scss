@@ -32,23 +32,23 @@ input{
   display: flex;
 }
 
-%row-hori-align{
+%FormItem-hori-align{
   @extend %flex-layout;
   justify-content: center;
 }
 
-%row-verti-align {
+%FormItem-verti-align {
   @extend %flex-layout;
   align-items: center;
 }
 
-%row-hori-verti-align {
-  @extend %row-hori-align;
+%FormItem-hori-verti-align {
+  @extend %FormItem-hori-align;
   align-items: center;
 }
 
 %col-hori-verti-align{
-  @extend %row-hori-verti-align;
+  @extend %FormItem-hori-verti-align;
   flex-flow: column;
 }
 

@@ -3,7 +3,7 @@ $lightGray: #eee;
 $darkGray: #a0a0a0;
 
 .home-header {
-  @extend %row-verti-align;
+  @extend %FormItem-verti-align;
   padding: 20px 30px;
   border-bottom: 1px dotted $lightGray;
 

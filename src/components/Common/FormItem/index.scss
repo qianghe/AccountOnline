@@ -1,0 +1,25 @@
+.form-item {
+  position: relative;
+  display: flex;
+  padding: 10px;
+
+  &--required::before {
+    content: '*';
+    position: absolute;
+    left: -2px;
+    width: 10px;
+    height: 10px;
+    display: block;
+    color: orange;
+  }
+
+  span {
+    text-align: center;
+  }
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    flex: $i;
+  }
+}

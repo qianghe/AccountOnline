@@ -6,7 +6,7 @@ const config = require('./config').build;
 const path = require('path');
 
 module.exports = merge(base, {
-  devtool: '#cheap-module-eval-source-map',
+  devtool: '#inline-source-map',
   devServer: {
     host: '127.0.0.1',
     port: 8088,

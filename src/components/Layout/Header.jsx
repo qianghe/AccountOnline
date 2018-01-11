@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CryptoJS from 'crypto-js';
 import {
   Sunny, Cloudy, Rainy, Flurries, ThunderStorm,
-} from '@components/Common/WeatherIcon';
+} from '@components/Common/Icon/WeatherIcon';
 import { dispatchJsonp } from '@lib/fetchDispatch';
 import './header.scss';
 

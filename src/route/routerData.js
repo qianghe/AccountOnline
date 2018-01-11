@@ -1,7 +1,7 @@
 /*eslint import/no-webpack-loader-syntax:0 */
 import LoginContainer from '@components/../container/LoginContainer';
-// import LoadHomeContainer from 'bundle-loader?lazy!../container/HomeContainer';
-import HomePage from '@components/Home';
+import LoadHomeContainer from 'bundle-loader?lazy!../container/HomeContainer';
+// import HomePage from '@components/Home';
 
 const routerData = [{
   path: '/login',
@@ -9,8 +9,8 @@ const routerData = [{
   component: LoginContainer,
 }, {
   path: '/home',
-  needBundleLoad: false,
-  component: HomePage,
+  needBundleLoad: true,
+  component: LoadHomeContainer,
 }];
 
 export default routerData;

@@ -2,34 +2,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { formatTime } from '@lib/utils';
-import Select from '@components/Common/Select';
+import Select from '@components/Common/Select/index';
+import MarkAccount from './MarkAccount';
 import './index.scss';
-
-const mockLists = [{
-  time: 1515340800,
-  total: 92,
-  lists: [{
-    name: '餐饮',
-    cost: 12,
-    mark: '',
-  }, {
-    name: '娱乐',
-    cost: 80,
-    mark: '和盆友看电影',
-  }],
-}, {
-  time: 1515168000,
-  total: 131,
-  lists: [{
-    name: '餐饮',
-    cost: 110,
-    mark: '同学聚会哦',
-  }, {
-    name: '餐饮',
-    cost: 21,
-    mark: '采购蔬菜',
-  }],
-}];
 
 const Account = ({ detail }) => (
   <div className="account">
@@ -60,17 +35,21 @@ Account.defaultProps = {
 Account.propTypes = {
   detail: PropTypes.object,
 };
+
 class Home extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      accounts: mockLists,
-    };
+  static defaultProps = {
+    items: [],
+    actions: {},
   }
-
+  static propTypes = {
+    items: PropTypes.array,
+    actions: PropTypes.object,
+  }
+  componentDidMount() {
+    this.props.actions.getAccountItems();
+  }
   render() {
-    const { accounts } = this.state;
+    const { items } = this.props;
     return (
       <div className="home">
         <section>
@@ -83,14 +62,14 @@ class Home extends Component {
             />
           </div>
           {
-            accounts.map((account, index) => (
+            items && items.map((account, index) => (
               <Account key={`account-${index}`} detail={account} />
             ))
           }
         </section>
         <section>
           <h3>记账单</h3>
-          <AccountForm />
+          <MarkAccount />
         </section>
       </div>
     );

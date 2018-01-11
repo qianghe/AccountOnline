@@ -1,0 +1,13 @@
+.mark-account {
+  margin-top: 30px;
+
+  input {
+    border: none;
+    width: 60%;
+    border-bottom: 1px dotted #aab8a3;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
