@@ -30,6 +30,37 @@ const accountItems = {
   }]
 };
 
+const tagList = {
+  respCode: 10001,
+  respMsg: 'success',
+  respData: [{
+    id: 1,
+    text: '餐饮',
+  }, {
+    id: 2,
+    text: '网购',
+  }, {
+    id: 3,
+    text: '娱乐',
+  }, {
+    id: 4,
+    text: '旅行',
+  }, {
+    id: 5,
+    text: '礼尚往来'
+  }, {
+    id: 6,
+    text: '美容',
+  }, {
+    id: 7,
+    text: '健身',
+  }, {
+    id: 8,
+    text: '零食',
+  }],
+};
+
 module.exports = {
   accountItems,
+  tagList,
 };

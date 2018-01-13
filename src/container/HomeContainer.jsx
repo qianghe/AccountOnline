@@ -4,9 +4,9 @@ import * as homeActionsCreator from '@redux/actions/HomeAction';
 import Home from '@components/Home';
 
 const mapStateToProps = (state) => {
-  console.log('state', state);
   return {
     items: state.accountItems,
+    tags: state.accountTags,
   };
 };
 const mapDispatchToProps = (dispatch) => {

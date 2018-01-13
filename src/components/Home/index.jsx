@@ -69,7 +69,7 @@ class Home extends Component {
         </section>
         <section>
           <h3>记账单</h3>
-          <MarkAccount />
+          <MarkAccount {...this.props} />
         </section>
       </div>
     );

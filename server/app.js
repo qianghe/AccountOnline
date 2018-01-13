@@ -27,7 +27,7 @@ app.use(views(__dirname + '/views', {
 }))
 app.use(cors({
   origin: function(ctx) {
-    if (ctx.header.origin.indexOf('hqiswonder') !== -1) {
+    if (ctx.header.origin && ctx.header.origin.indexOf('hqiswonder') !== -1) {
       return ctx.header.origin;
     }
     return '*';

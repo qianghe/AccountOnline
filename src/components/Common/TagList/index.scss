@@ -1,0 +1,20 @@
+.account-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  &-item {
+    padding: 5px;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    border: 1px solid #eee;
+    cursor: pointer;
+    color: #999;
+
+    &--selected {
+      color: #fff;
+      background-color: #aab8a3;
+    }
+  }
+}

@@ -24,6 +24,14 @@ const FormItem = (props) => {
         })}
       >
         {props.children}
+        <span
+          className={classNames({
+            'form-item-error': true,
+            'form-item-error--show': props.error ? true : false,
+          })}
+        >
+          {props.error}
+        </span>
       </div>
     </div>
   );
@@ -32,6 +40,7 @@ const FormItem = (props) => {
 FormItem.defaultProps = {
   label: '',
   required: 'false',
+  error: '',
   labelCol: 0,
   spanCol: 0,
   children: null,
@@ -40,6 +49,7 @@ FormItem.defaultProps = {
 FormItem.propTypes = {
   label: PropTypes.string,
   required: PropTypes.string,
+  error: PropTypes.string,
   labelCol: PropTypes.number,
   spanCol: PropTypes.number,
   children: PropTypes.any,

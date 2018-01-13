@@ -42,7 +42,6 @@ class Select extends Component {
     });
   }
   handleToggle = () => {
-    console.log('handleToggle');
     this.setState({ toggle: !this.state.toggle });
   }
   render() {

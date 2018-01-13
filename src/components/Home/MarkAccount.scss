@@ -10,4 +10,13 @@
       outline: none;
     }
   }
+
+  button[type="submit"] {
+    margin-left: 250px;
+    padding: 10px 5px;
+    background-color: #aab8a3;
+    color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 0 2px 2px #aab83a;
+  }
 }
