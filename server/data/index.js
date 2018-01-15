@@ -60,7 +60,26 @@ const tagList = {
   }],
 };
 
+const pie = {
+  respCode: 10001,
+  respMsg: 'success',
+  respData: [{
+    tag: '餐饮',
+    cost: 12,
+  }, {
+    tag: '娱乐',
+    cost: 80,
+  }, {
+    tag: '旅行',
+    cost: 110,
+  }, {
+    tag: '零食',
+    cost: 21,
+  }],
+};
+
 module.exports = {
   accountItems,
   tagList,
+  pie,
 };

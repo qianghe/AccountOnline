@@ -14,4 +14,9 @@ router.get('/tags', function (ctx, next) {
 
 router.post('/add', accountContoller.createAccount);
 
+router.get('/chartData', function (ctx, next) {
+  console.log('type:', ctx.query.type);
+  ctx.body = data[ctx.query.type];
+});
+
 module.exports = router;

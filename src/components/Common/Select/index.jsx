@@ -8,6 +8,7 @@ class Select extends Component {
   static defaultProps = {
     placeholder: '',
     defaultValue: '',
+    style: {},
     options: [],
     onChange: () => {},
   }
@@ -15,6 +16,7 @@ class Select extends Component {
     placeholder: PropTypes.string,
     defaultValue: PropTypes.string,
     options: PropTypes.array,
+    style: PropTypes.object,
     onChange: PropTypes.func,
   }
   constructor(props) {
@@ -46,10 +48,13 @@ class Select extends Component {
   }
   render() {
     const { toggle, value } = this.state;
-    const { options, placeholder } = this.props;
+    const { options, placeholder, style } = this.props;
 
     return (
-      <div className="comp-select">
+      <div
+        className="comp-select"
+        style={{ ...style }}
+      >
         <section
           className={classNames({
             'comp-select-text': true,

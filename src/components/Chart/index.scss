@@ -1,0 +1,54 @@
+.chart-page {
+  display: flex;
+  margin-left: 20px;
+  padding: 15px;
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px dotted #eee;
+    padding-bottom: 10px;
+    width: 25%;
+
+    > div{
+      &:nth-of-type(1) {
+        display: flex;
+        align-items: center;
+      }
+      color: #999;
+    }
+
+    p {
+      margin-right: 20px;
+      font-size: 20px;
+
+      &::first-letter {
+        font-size: 150%;
+        color: #666;
+      }
+    }
+  }
+
+  &-filter {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+
+    > span {
+      color: #999;
+    }
+    .chart-type {
+      display: inline-block;
+      padding: 10px;
+      border-radius: 3px;
+      color: #fff;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
