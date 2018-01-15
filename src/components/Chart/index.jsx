@@ -8,11 +8,11 @@ import './index.scss';
 
 class ChartPage extends Component {
   /*eslint react/sort-comp: 0*/
-  chartTypes = ['Pie', 'Line'];
+  chartTypes = { 'pie': '饼图', 'bar': '柱状图'}
   state = {
     chartType: 'pie',
     data: [],
-    colors: RandomColor({ hue: 'monochrome', count: this.chartTypes.length }),
+    colors: RandomColor({ hue: 'monochrome', count: Object.keys(this.chartTypes).length }),
   }
   componentDidMount() {
     this.fetchChartData();
@@ -59,14 +59,14 @@ class ChartPage extends Component {
           <div className="chart-page-filter">
             <span>图表类型：</span>
             {
-              this.chartTypes.map((chart, index) => (
+              Object.keys(this.chartTypes).map((key, index) => (
                 <span
-                  key={`type-${chart}`}
+                  key={`type-${key}`}
                   style={{ backgroundColor: colors[index] }}
                   className="chart-type"
-                  onClick={() => this.selectChartType(chart.toLowerCase())}
+                  onClick={() => this.selectChartType(key.toLowerCase())}
                 >
-                  {chart}
+                  {this.chartTypes[key]}
                 </span>
               ))
             }
